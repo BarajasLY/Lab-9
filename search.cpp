@@ -58,4 +58,18 @@ int main(){
 
         cout << index_if_found << ":" << elapsed_time_in_sec << endl;
     }
+
+    for(int i = 0; i < elem_to_find.size(); i++){
+        int elem = elem_to_find[i];
+
+        clock_t start = clock();
+        int index_if_found2 = binarySearch(v, 0, v.size() - 1, elem);
+        clock_t end = clock();
+
+        double elapsed_time_in_sec = (double(end - start)/CLOCKS_PER_SEC);
+
+        cout << index_if_found2 << ":" << elapsed_time_in_sec << "binary" << endl;
+    }
+
+    return 0;
 }
